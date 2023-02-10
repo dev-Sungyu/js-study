@@ -19,8 +19,9 @@ let products = [
     new Product('참후레쉬', 1500, 60),
     new Product('참후레쉬', 1500, 30)
 ];
-
-// file.writeFile('shop.json', JSON.stringify(products), 'utf-8', error => console.log(error ? error : '성공!'));
+                                                          //  function(error){console.log(error ? error : '성공!')}
+file.writeFile('shop.json', JSON.stringify(products), 'utf-8', error => console.log(error ? error : '성공!'));
+                                // function(error,content){}
 file.readFile('shop.json', 'utf-8', (error,content) => {
     if(error){
         console.log(error);
@@ -29,6 +30,7 @@ file.readFile('shop.json', 'utf-8', (error,content) => {
     }
 });
 let arinfo = [
+    // products 에 있는 Array 객체를 map으로 하나하나 가져와서 product.price로 변환해줌
     // reduce 역할은 오른쪽에 있는걸 += 하는거
     products.map(product => product.price).reduce((total, price) => total + price),
     products.map(product => product.stock).reduce((total, stock) => total + stock)
@@ -37,6 +39,30 @@ console.log(arinfo);
 
 file.writeFile('sum.json', JSON.stringify(arinfo), 'utf-8', error => console.log(error ? error : '성공!'));
 
+// 준상님 개량 버전
+        // /* shop.json의 형식이 JSON이므로 parse하여 객체화 한다. */
+        // arContent = JS,.ON.parse(content);
+        // /*  shop.json에서 읽어온 각 가격과 재고의 합을 Array에 담음 */
+        // let arInfo = [
+        //     /* 누적 가격 */
+        //     arContent.map(e => e.price).reduce((totalPrice, price) => totalPrice + price),   
+        
+        //     /* 누적 재고 */
+        //     arContent.map(e => e.stock).reduce((totalStock, stock) => totalStock + stock)    
+        // ]
+        // file.writeFile('sum.json', JSON.stringify(arInfo), 'utf-8', error => console.log(error ? error : "성공!"));
+
+//  강사님꺼
+//         let productsJSON = JSON.stringify(products);
+// // file.writeFile('shop.json', productsJSON, 'utf-8', error => {});
+// file.readFile('shop.json', 'utf-8', (error, contents) => {
+//     let products = JSON.parse(contents);
+//     let totalPrice = products.map(product => product.price).reduce((totalPrice, price) => totalPrice + price);
+//     let totalStock = products.map(product => product.stock).reduce((totalStock, stock) => totalStock + stock);
+//     let sum = {totalPrice: totalPrice, totalStock: totalStock};
+//     let sumJSON = JSON.stringify(sum);
+//     file.writeFile('sum.json', sumJSON, 'utf-8', error => {});
+// });
 
 
 // let productsJSON = JSON.stringify(products);

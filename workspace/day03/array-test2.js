@@ -35,22 +35,14 @@
 // console.log(hantoNum(input));
 
 //  강사님꺼
-// let hangle = "공일이삼사오육칠팔구".split("");
-// let input = "공공이사".split("");
-// let result = input.map(input => hangle.indexOf(input)).join("");
+let hangle = "공일이삼사오육칠팔구".split("");
+let input = "공공이사".split("");
+let result = input.map(input => hangle.indexOf(input)).join("");
 
-// console.log(parseInt(result));
+console.log(parseInt(result));
 
 // 정수를 한글로 변경
-let number = "0, 1, 2, 3, 4, 5, 6, 7, 8, 9";
-let input = "일삼이사";
-let form = ""
-function numtoHan(int) {
-    var result = "";
-    result += 
-}
 
-//  강사님꺼
 // let hangle = "공일이삼사오육칠팔구".split("");
 // let input = "1024".split("");
 // let result = input.map(input => hangle[input]).join("");
