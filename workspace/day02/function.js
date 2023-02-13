@@ -6,8 +6,8 @@ console.log(result);
 /* 가변 인자 */
 function add() {
     var numbers = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        numbers[_i] = arguments[_i];
+    for (var i = 0; i < arguments.length; i++) {
+        numbers[i] = arguments[i];
     }
     var result = 0;
     for (var i = 0; i < numbers.length; i++) {
@@ -32,10 +32,10 @@ function add() {
 intro("최선규", 26, "남자", "학생");
 function intro(name) {
     var args = [];
-    for (var _i = 1; _i < arguments.length; _i++) {
-        args[_i - 1] = arguments[_i];
+    for (var i = 1; i < arguments.length; i++) {
+        args[i - 1] = arguments[i];
     }
-    console.log('이름: ${name}');
+    console.log(`이름: ${name}`);
     for (var i = 0; i < args.length; i++) {
         console.log(args[i]);
     }

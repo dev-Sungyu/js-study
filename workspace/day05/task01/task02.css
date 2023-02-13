@@ -1,0 +1,51 @@
+div.numWrap {
+    border-radius: 100%;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background-color: yellow;
+    border-color: purple;
+    border-style: solid;
+}
+
+input {
+    margin: 0 auto;
+    display: block;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.number {
+    /* left: 35%;
+    top: 15%; */
+    display: inline-block;
+    margin: 0 auto;
+    padding-top: 13%;
+}
+
+main {
+    /* max-width: 19vw; */
+    min-width: 360px;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#output {
+    margin-bottom: 100px;
+}
+
+#inputText {
+    border-style: solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    /* border-bottom: 3px; */
+}
